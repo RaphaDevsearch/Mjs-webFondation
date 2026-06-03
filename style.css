@@ -1,0 +1,42 @@
+/* Reset */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root */
+
+body{
+  font-family: Arial, sans-serif;
+}
+
+/* App Layout */
+
+#app{
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.header{
+  padding: 1rem;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1{
+  font-size: 2rem;
+}
+
+/* Body */
+
+.body{
+  flex: 1;
+
+  padding: 2rem;
+}

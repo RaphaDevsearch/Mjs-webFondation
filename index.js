@@ -1,11 +1,17 @@
 import {
-  createelement
+  createelement,
+  Header,
+  Body
 } from './Extension.js';
 
-const app = createelement('div', {
-  id: 'app',
-  className: 'container',
-  textContent: 'Hello, World!'
-});
-
+const App = () => {
+  return createelement("div", {
+    id: "app",
+    children: [
+      Header(),
+      Body()
+    ]
+  });
+};
+const app = App();
 document.body.appendChild(app);

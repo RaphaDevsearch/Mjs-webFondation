@@ -20,3 +20,29 @@ export const createelement = (
   }
   return element;
 }
+
+export const Header = () => {
+  return createelement("header", {
+    className: "header",
+    children: [
+      createelement("h1", {
+        textContent: "My Application"
+      })
+    ]
+  });
+};
+
+export const Body = () => {
+  return createelement("main", {
+    className: "body",
+    children: [
+      createelement("h2", {
+        textContent: "Welcome"
+      }),
+
+      createelement("p", {
+        textContent: "This is the body section."
+      })
+    ]
+  });
+};
