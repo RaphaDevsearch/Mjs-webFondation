@@ -1,3 +1,6 @@
+import { Sidebar } from "./Sidebar.js";
+import { ViewContent } from "./ViewContent.js";
+
 export const createelement = (
   tagName,
   {
@@ -35,13 +38,8 @@ export const Body = () => {
   return createelement("main", {
     className: "body",
     children: [
-      createelement("h2", {
-        textContent: "Welcome"
-      }),
-
-      createelement("p", {
-        textContent: "This is the body section."
-      })
+      Sidebar(),
+      ViewContent()
     ]
   });
 };

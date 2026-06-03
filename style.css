@@ -15,10 +15,10 @@ body{
 /* App Layout */
 
 #app{
-  min-height: 100vh;
+    height:100vh;
 
-  display: flex;
-  flex-direction: column;
+    display:flex;
+    flex-direction:column;
 }
 
 /* Header */
@@ -93,7 +93,26 @@ body{
 /* Body */
 
 .body{
-  flex: 1;
+    flex:1;
 
-  padding: 2rem;
+    display:flex;
+
+    overflow:hidden;
+}
+
+.sidebar{
+    width:250px;
+
+    border-right:1px solid #ddd;
+
+    padding:1rem;
+
+    flex-shrink:0;
+}
+.view-content{
+    flex:1;
+
+    padding:1.5rem;
+
+    overflow-y:auto;
 }
