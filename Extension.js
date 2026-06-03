@@ -25,9 +25,8 @@ export const Header = () => {
   return createelement("header", {
     className: "header",
     children: [
-      createelement("h1", {
-        textContent: "My Application"
-      })
+      HeaderLeft(),
+      HeaderRight()
     ]
   });
 };
@@ -43,6 +42,70 @@ export const Body = () => {
       createelement("p", {
         textContent: "This is the body section."
       })
+    ]
+  });
+};
+
+
+/**
+ * conponents
+ */
+
+const Logo = () => {
+  return createelement("div", {
+    className: "logo",
+    textContent: "MyApp"
+  });
+};
+
+const UpgradeButton = () => {
+  const button = createelement("button", {
+    className: "btn"
+  });
+
+  button.innerHTML = `
+    <span>⬆️</span>
+    <span>Upgrade</span>
+  `;
+
+  return button;
+};
+
+const ShareButton = () => {
+  const button = createelement("button", {
+    className: "btn"
+  });
+
+  button.innerHTML = `
+    <span>🔗</span>
+    <span>Share</span>
+  `;
+
+  return button;
+};
+
+const MenuButton = () => {
+  return createelement("button", {
+    className: "icon-btn",
+    textContent: "⋮"
+  });
+};
+
+const HeaderLeft = () => {
+  return createelement("div", {
+    className: "header-left",
+    children: [
+      Logo()
+    ]
+  });
+};
+const HeaderRight = () => {
+  return createelement("div", {
+    className: "header-right",
+    children: [
+      UpgradeButton(),
+      ShareButton(),
+      MenuButton()
     ]
   });
 };
