@@ -7,12 +7,19 @@ export const Sidebar = () => {
     className: "sidebar",
     children: [
       Navigation([
-        'link_1',
-        'link_2',
-        'link_3',
-        'link_4',
-        'link_5'
-      ])
+  {
+    label: "Dashboard",
+    href: "#dashboard"
+  },
+  {
+    label: "Projects",
+    href: "#projects"
+  },
+  {
+    label: "Settings",
+    href: "#settings"
+  }
+])
     ]
   });
 };
