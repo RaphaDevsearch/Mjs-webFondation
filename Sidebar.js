@@ -1,11 +1,11 @@
-// import { createelement } from "./utils.js";
-import { createelement } from "./Extension.js";
+// import { Createelement } from "./utils.js";
+import { CreateElement } from "./Utils.js";
 
 export const Sidebar = () => {
-  return createelement("aside", {
+  return CreateElement("aside", {
     className: "sidebar",
     children: [
-      createelement("h3", {
+      CreateElement("h3", {
         textContent: "Navigation"
       })
     ]

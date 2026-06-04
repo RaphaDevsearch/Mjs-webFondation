@@ -1,31 +1,10 @@
 import { Sidebar } from "./Sidebar.js";
 import { ViewContent } from "./ViewContent.js";
+import {CreateElement} from './Utils.js'
 
-export const createelement = (
-  tagName,
-  {
-    className = '',
-    id = '',
-    textContent = '',
-    children = [],
-    othersAttributes = {},
-  }={}
-)=>{
-  const element = document.createElement(tagName);
-  if(className) element.className = className;
-  if(id) element.id = id;
-  if(textContent) element.textContent = textContent;
-
-  if(children.length > 0){
-    children.forEach(child =>{
-      element.appendChild(child);
-    })
-  }
-  return element;
-}
 
 export const Header = () => {
-  return createelement("header", {
+  return CreateElement("header", {
     className: "header",
     children: [
       HeaderLeft(),
@@ -35,7 +14,7 @@ export const Header = () => {
 };
 
 export const Body = () => {
-  return createelement("main", {
+  return CreateElement("main", {
     className: "body",
     children: [
       Sidebar(),
@@ -50,14 +29,14 @@ export const Body = () => {
  */
 
 const Logo = () => {
-  return createelement("div", {
+  return CreateElement("div", {
     className: "logo",
     textContent: "MyApp"
   });
 };
 
 const UpgradeButton = () => {
-  const button = createelement("button", {
+  const button = CreateElement("button", {
     className: "btn"
   });
 
@@ -70,7 +49,7 @@ const UpgradeButton = () => {
 };
 
 const ShareButton = () => {
-  const button = createelement("button", {
+  const button = CreateElement("button", {
     className: "btn"
   });
 
@@ -83,14 +62,14 @@ const ShareButton = () => {
 };
 
 const MenuButton = () => {
-  return createelement("button", {
+  return CreateElement("button", {
     className: "icon-btn",
     textContent: "⋮"
   });
 };
 
 const HeaderLeft = () => {
-  return createelement("div", {
+  return CreateElement("div", {
     className: "header-left",
     children: [
       Logo()
@@ -98,7 +77,7 @@ const HeaderLeft = () => {
   });
 };
 const HeaderRight = () => {
-  return createelement("div", {
+  return CreateElement("div", {
     className: "header-right",
     children: [
       UpgradeButton(),

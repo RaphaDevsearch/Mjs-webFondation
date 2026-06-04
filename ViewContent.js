@@ -1,13 +1,13 @@
-import { createelement } from "./Extension.js";
+import { CreateElement } from "./Utils.js";
 export const ViewContent = () => {
-  return createelement("section", {
+  return CreateElement("section", {
     className: "view-content",
     children: [
-      createelement("h2", {
+      CreateElement("h2", {
         textContent: "Dashboard"
       }),
 
-      createelement("p", {
+      CreateElement("p", {
         textContent: "Main content goes here."
       })
     ]
